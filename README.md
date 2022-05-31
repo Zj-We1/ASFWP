@@ -3,3 +3,5 @@
 k-means has long been one of the most widely used algorithms in the field of data clustering due to its wide application range and strong algorithm scalability. However, in today's era of big data, the use of k-means is increasingly limited due to a large amount of noise data. When many features are irrelevant or have a certain number of outliers, k-means performance is unsatisfactory. To solve these problems, this paper proposes an adaptive sample-feature double-path weighted k-means clustering algorithm. The algorithm introduces two different regularization terms and adaptively adjusts the sample and feature weights in each iteration by annealing the k-means solution, which effectively avoids getting poor local minima. Meanwhile, the simplicity of the classical k-means algorithm is maintained. In the designed synthetic data set, the algorithm successfully distinguishes artificially added noise features and noise samples. In addition, the algorithm's superior clustering performance is verified by the validation on real data sets and comparison with other advanced algorithms.
 
 email:20191002792@cug.edu.cn
+
+代码中数据集为合成数据集
