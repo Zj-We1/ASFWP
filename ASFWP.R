@@ -102,7 +102,7 @@ my3entropy_weight.power.k.means=function(X,s=-1,k,lambda,eta=1.04,beta=1,tmax=20
     label[i]=which.min(dd)
   }
   list2=list(theta,label,W,h,con)
-  names(list2)=c('theta','label','w_weight',"s_weight",'con')
+  names(list2)=c('theta','label','f_weight',"s_weight",'con')
   return(list2)
 }
 data_generate=function(n,M,prob1,sigma,sigma2){
@@ -157,5 +157,5 @@ a2=rep(sum(l0$s_weight[201:1000])/800,800)
 plot(1:n,l0$s_weight,type="l",xlab='sample',ylab='s_weight')
 lines(1:200,a1,col=2,lwd=5)
 lines(201:1000,a2,col=4,lwd=5)
-plot(1:p,l0$w_weight,type="b",xlab="feature",ylab="f_weight")
+plot(1:p,l0$f_weight,type="b",xlab="feature",ylab="f_weight")
 
