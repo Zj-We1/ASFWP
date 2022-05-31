@@ -4,4 +4,4 @@ k-means has long been one of the most widely used algorithms in the field of dat
 
 email:20191002792@cug.edu.cn
 
-代码中数据集为合成数据集
+代码中数据集为合成数据集，目的是验证算法分辨噪声的能力
