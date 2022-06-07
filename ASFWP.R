@@ -4,7 +4,7 @@ library(igraph)
 w.norm=function(y,w,beta){
   return(sum(y^2*w^(beta)))
 }
-my3entropy_weight.power.k.means=function(X,s=-1,k,lambda,eta=1.04,beta=1,tmax=200,tol=10^(-5)){
+ASFWP=function(X,s=-1,k,lambda,eta=1.04,beta=1,tmax=200,tol=10^(-3)){
   n=dim(X)[1]
   p=dim(X)[2]
   phi=matrix(0,nrow=n,ncol=k)
@@ -149,7 +149,7 @@ for(i in 1:a)
 for(i in 1:p){
   X[,i]=(X[,i]-mean(X[,i]))/sd(X[,i])
 }
-l0=my3entropy_weight.power.k.means(X,k=5,s=-1,eta=1,lambda=1.03,tmax=100,tol=0.001)
+l0=ASFWP(X,k=5,s=-1,eta=1,lambda=1.03,tmax=100,tol=0.001)
 compare(label,l0$label,'nmi')
 compare(label,l0$label,'adjusted.rand')
 a1=rep(sum(l0$s_weight[1:200])/200,200)
